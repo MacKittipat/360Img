@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>HTML5 Viewer</title>
+        <link rel = "stylesheet" href = "HTML5/HTML5Viewer.css" type = "text/css" />
+        <script type = "text/javascript" src = "HTML5/jQuery.js"></script>
+        <script type = "text/javascript" src = "HTML5/jQueryPlugin.js"></script>
+        <script type = "text/javascript" src = "HTML5/HTML5Loader.js"></script>
+        <script type = "text/javascript" src = "HTML5/HTML5Viewer.js"></script>
+    </head>
+    <body>
+<!--v1.3.0
+	//		===== How to implement =====
+	//		1. Please add Javascript files in <head></head> section
+	//		2. Call animate360 function.
+	//
+	//		===== Customize Parameter =====
+	//		1. centerInWindow (default:true)
+	//			true -> set outer frame position in the center of the browser window.
+	//			false -> you can set the outer frame position by yourself.
+	//			* Note that touch devices will set this div in the center of the browser window even thought you rotate device,
+	//			we suggest you turn on this option when whole webpage only has this div without other elements.
+	//		2. xmlPath (default:./ -> put together with this html file)
+	//			Set path to direct where your Profile.xml is.
+	//		3. objPath (default:./Images/ -> put into folder named 'Images')
+	//			Set path to direct where your image folder is.
+	//		4. iconPath (default:./HTML5/Images/)
+	//			Set path to direct where the folder place icon and button image files.
+-->
+        <div id = "Frame" class = "animateCreatorContainer" style="width:400px; height:600px;"></div>
+        <script type="text/javascript">
+			    jQuery(function ($) {
+			        $('#Frame').animate360({
+				        centerInWindow: true,
+				        xmlPath: './',
+				        objPath: './Images/',
+				        iconPath: './HTML5/Images/'
+				    });
+			    });
+	       </script>
+    </body>
+</html>
